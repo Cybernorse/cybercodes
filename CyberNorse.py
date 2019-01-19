@@ -7,7 +7,7 @@ import os
 def Cyber_norse_bot():              #extracting the websites data for links and saving them into the file 
     global cyber_filter
     global cyber_file
-    cyber_url="https://darkwebnews.com"
+    cyber_url="https://github.com"
     cyber_session=requests.Session()
     cyber_request=cyber_session.get(cyber_url)
     cyber_text=cyber_request.text

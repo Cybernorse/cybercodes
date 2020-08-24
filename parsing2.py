@@ -7,7 +7,7 @@ from nltk.corpus import stopwords
 import numpy as np
 '''
 modules to be installed:
-#   slearn
+#   sklearn
 #   nltk    (download the stopwords database with | >>>nltk.download('stopwords') | in the python3.7 interpreter)
 #   numpy==1.18.5
 numpy must have that version or else it will prompt you an error.

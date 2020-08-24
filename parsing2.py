@@ -5,7 +5,12 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.corpus import stopwords
 import numpy as np
-
+'''
+modules to be installed:
+#   slearn
+#   numpy==1.18.5
+numpy must have that version or else it will prompt you an error.
+'''
 class parsing:
     def __init__(self,*args,**kwargs):
         with open('/home/bigpenguin/Downloads/WhatsApp Export.txt','r') as fi:

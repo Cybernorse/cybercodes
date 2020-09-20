@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  db:
+    image: postgres:9.5
+    environment:
+      # - "POSTGRES_HOST_AUTH_METHOD=trust"
+      - POSTGRES_DB=ads
+      - POSTGRES_USER=adsuser
+      - POSTGRES_PASSWORD=eminuses-es
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  app:
+    build: .
+    command: python3.7 /code/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+
+volumes:
+  postgres_data:
